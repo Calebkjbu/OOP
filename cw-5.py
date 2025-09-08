@@ -1,6 +1,9 @@
+import time
+from idlelib.run import MyHandler
+
 myList = []
-x = 0
-while x==0:
+z = 0
+while z==0:
     print("1.Append to the list")
     print("2.Remove from the list")
     print("3.pop an element form the list")
@@ -11,23 +14,39 @@ while x==0:
     if option == 1:
        addToList = input("What would you like to add?")
        myList.append(addToList)
+       time.sleep(1)
     elif option == 2:
-       print(myList)
-       RemList = input("What would you like to remove?")
-       myList.remove(RemList)
+       x = len(myList)
+       if x >= 1:
+            print(myList)
+            RemList = input("What would you like to remove?")
+            myList.remove(RemList)
+            time.sleep(1)
+       else :
+           print("there is nothing in the list")
+           time.sleep(1)
     elif option == 3:
-        x = len(myList) -1
-        x  = myList[x]
-        print("you are removing..", x)
-        myList.pop()
+        x = len(myList)
+        if x >= 1:
+            y = len(myList) -1
+            y  = myList[x]
+            print("you are removing..", x)
+            myList.pop()
+            time.sleep(1)
+        else:
+            print("there is nothing in the list")
+            time.sleep(1)
     elif option == 4:
        for i in range (0,len(myList)):
            print(myList[i])
+           time.sleep(1)
     elif option == 5:
        print("quitting...")
+       time.sleep(1)
        x = 1
        break
     else :
        print("alright bud use one of the numbers ")
+       time.sleep(1)
 
 
