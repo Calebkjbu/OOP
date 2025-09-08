@@ -29,8 +29,8 @@ while z==0:
         x = len(myList)
         if x >= 1:
             y = len(myList) -1
-            y  = myList[x]
-            print("you are removing..", x)
+            y  = myList[y]
+            print("you are removing..", y)
             myList.pop()
             time.sleep(1)
         else:
