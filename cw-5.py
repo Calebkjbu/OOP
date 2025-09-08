@@ -43,10 +43,11 @@ while z==0:
     elif option == 5:
        print("quitting...")
        time.sleep(1)
-       x = 1
+       z = 1
        break
     else :
        print("alright bud use one of the numbers ")
        time.sleep(1)
+
 
 
