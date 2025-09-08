@@ -16,8 +16,9 @@ while x==0:
        RemList = input("What would you like to remove?")
        myList.remove(RemList)
     elif option == 3:
-        x = len(myList)
-        print("you are removing..", myList[x])
+        x = len(myList) -1
+        x  = myList[x]
+        print("you are removing..", x)
         myList.pop()
     elif option == 4:
        for i in range (0,len(myList)):
