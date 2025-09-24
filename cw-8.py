@@ -52,6 +52,14 @@ while x == 1:
     elif option == 3:
         whaproject = input("What project would you like to print?(id)")
         print(project[whaproject])
+    elif option ==4:
+        print(project)
+    elif option ==5:
+        x = 4
+        break
+
+
+print("WHATTTTTT")
 
 
 
