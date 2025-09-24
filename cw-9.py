@@ -25,6 +25,7 @@ while x == 1:
     elif option == 3:
         display()
     elif option == 4:
+        print("quiting....")
         break
     else:
         print("BOOHOO BUD")
