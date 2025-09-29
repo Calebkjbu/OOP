@@ -1,2 +1,2 @@
 if x == 0:
-    print ("whatt")
+    print ("whaatt")
