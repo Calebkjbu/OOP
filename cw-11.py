@@ -15,7 +15,7 @@ class Student:
     def edit_student(self):
         self.stu_id = input("WHat you wanna change")
     def display_student(self):
-        print("stuid: ", self.stu_id)
+        print("student id: ", self.stu_id)
         print("name: ", self.stu_Name)
         print("major: ", self.major)
         print("gpa: ", self.gpa)
@@ -27,11 +27,11 @@ class Student:
 
 
 class Courses:
-    def __init__(self):
+    def __init__(self, cid, cname):
         self.type = ""
         self.credits = 0
-        self.course_Id = ""
-        self.name = ""
+        self.course_Id = cid
+        self.name = cname
 
     def add_Course(self):
         self.type = input("What is the course type?")
@@ -64,8 +64,8 @@ s1 = Student()
 s1.add_student()
 
 
-c1 = Courses()
-c1.add_Course()
+c1 = Courses("cs1233", "OOP")
+
 
 s1.register_course(c1)
 s1.display_student()
