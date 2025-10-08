@@ -15,6 +15,10 @@ class Student:
         self.stu_id = input("WHat you wanna change")
     def display_student(self):
         print("stuid:", self.stu_id)
+        print("name", self.stu_Name)
+        print("major", self.major)
+        print("gpa",self.gpa)
+        print("dop", self.dop)
 
 
 class Courses:
