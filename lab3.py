@@ -83,35 +83,91 @@ class Author:
         print("Phone num: ", self.phone)
         print("Email: ", self.emailid)
 
-
-a1 = Author()
-a1.add_author()
-
-a2 = Author()
-a2.add_author()
-
+x = 1
 u1 = user()
-u1.create_user()
-
 u2 = user()
-u2.create_user()
-
 b1 = book()
-b1.add_book()
-b1.add_author_tobook(a1)
-
 b2 = book()
-b2.add_book()
-b2.add_author_tobook(a2)
+a1 = Author()
+a2 = Author()
+while x == 1:
+
+    print("1.Create a user")
+    print("2.Add a book")
+    print("3.Add an author")
+    print("4.Display")
+    print("5.Borrow Books")
+    print("6.Quit")
+    option = int(input("Choose option: "))
+
+    if option == 1:
+        print("1.Create User 1?")
+        print("2.Create User 2?")
+        rs = int(input("Which?: "))
+        if rs == 1:
+            u1.create_user()
+        if rs == 2:
+            u2.create_user()
+    if option == 2:
+        print("Create Book 1?")
+        print("Create Book 2?")
+        bp = int(input("Which?: "))
+        if bp == 1:
+            b1.add_book()
+        if bp == 2:
+            b2.add_book()
+    if option == 3:
+        print("1.Create Author 1?")
+        print("2.Create Author 2?")
+        ap = int(input("Which?: "))
+        if ap == 1:
+            a1.add_author()
+        if ap == 2:
+            a2.add_author()
+    if option == 4:
+        print("1.Dislpay Users?")
+        print("2.Display Books?")
+        print("3.Display Authors?")
+        dp = int(input("Which?: "))
+        if dp == 1:
+            u1.display()
+            u2.display()
+        if dp == 2:
+            b1.display()
+            b2.display()
+        if dp == 3:
+            a1.display()
+            a2.display()
+    if option == 5:
+        print("1.Add Books to user 1?")
+        print("2.Add Books to user 2?")
+        cd = int(input("Which?: "))
+        if cd == 1:
+            print("1.Book1? ", b1.Title)
+            print("2.book2? ", b2.Title)
+            bookpick = int(input("Which?: "))
+            if bookpick == 1:
+                u1.borrow_book(b1)
+                u1.display()
+            if bookpick == 2:
+                u1.borrow_book(b2)
+                u1.display()
+
+        if cd == 2:
+            print("1.Book1? ", b1.Title)
+            print("2.book2? ", b2.Title)
+            bookpick = int(input("Which?: "))
+            if bookpick == 1:
+                u2.borrow_book(b1)
+                u2.display()
+            if bookpick == 2:
+                u2.borrow_book(b2)
+                u2.display()
+        if option == 6:
+            break
 
 
-u1.borrow_book(b1)
-u1.borrow_book(b2)
 
-u2.borrow_book(b1)
 
-u1.display()
-a1.display()
-b1.display()
 
 
