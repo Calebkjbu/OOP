@@ -49,6 +49,6 @@ while 1:
         while 1:
             try:
                 data = pickle.load(f2)
-                print(data.display_product_info())
+                print(data.pname)
             except EOFError:
                 break

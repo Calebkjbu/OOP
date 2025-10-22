@@ -1,6 +1,6 @@
-file1 = open("passwordshw-1.txt", "w")
-x = 1
-while x == 1:
+import pickle
+
+while 1:
     print("1.Login")
     print("2.Quit")
 
@@ -8,6 +8,11 @@ while x == 1:
 
     if option == 1:
         usrname = input("whats the username?")
+        file1 = open("passswordshw.dat", "rb")
+        f1 = pickle.load(file1)
+        i = 1
+        for x in f1:
+            var = "usr"+ str(i)
+            print(file1[var]["uid"])
+            i =+ 1
 
-        for x in file1:
-            print(x)
