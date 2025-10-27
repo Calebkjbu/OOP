@@ -22,11 +22,11 @@ class customer:
 
     def credit_to(self,tran):
         i = 1
-        print("Choose What card to add to")
+        print(self.cname, "Choose What card to add to")
         for x in self.credit_card:
             print(str(i), x.card_no)
             i += 1
-        choice = input("??")
+        choice = int(input("??"))
         if choice == 1:
             self.credit_card[0].balance += tran
             print(self.credit_card[0].balance)
@@ -36,8 +36,12 @@ class customer:
 
 
 
-    def debit_from(self,):
-        print("What is the amount you would like to withdraw?")
+    def debit_from(self,tran):
+
+        print(self.cname,"The amount that is being withdarwn is" , str(tran))
+        self.debit_card.balance -= tran
+        print("Balance left after transaction",self.debit_card.balance)
+
 
 
 
@@ -95,6 +99,9 @@ class card:
 c1 = customer()
 c1.add_new_customer()
 
+c2 = customer()
+c2.add_new_customer()
+
 cr1 = card()
 cr1.addCard()
 
@@ -106,9 +113,13 @@ cr3.addCard()
 
 c1.add_credit_card_customer(cr1)
 c1.add_credit_card_customer(cr2)
-c1.add_Debit_card(cr3)
+
+
+c2.add_Debit_card(cr3)
 
 c1.credit_to(1000)
+c2.debit_from(1000)
+
 
 
 
