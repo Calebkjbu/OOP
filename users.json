@@ -1,0 +1,17 @@
+{
+    "test1": {
+        "password": "test",
+        "cards": [],
+        "purchases": [
+            {
+                "name": "Big vacuum",
+                "price": 120
+            },
+            {
+                "name": "DDR5 RAM 8GB",
+                "price": 80
+            }
+        ],
+        "balance": 0.0
+    }
+}
